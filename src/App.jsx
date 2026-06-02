@@ -463,7 +463,7 @@ export default function App() {
     }
   };
 
-  // ── ANÁLISIS IA WEB — Gemini con contexto actual ──
+  // ── ANÁLISIS IA WEB — via Vercel serverless proxy ──
   const fetchSimWebAnalysis = async (homeTeam, awayTeam, prediction) => {
     setSimWebAnalysis({ loading: true, text: null, error: null });
     const prompt = `Eres un analista experto del Mundial 2026. Analizá este partido y dá contexto actual:
@@ -484,18 +484,15 @@ Respondé con 4 secciones cortas en español:
 Máximo 200 palabras total. Sé conciso y directo.`;
 
     try {
-      const res = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AQ.Ab8RN6LdZ4F9UNq-cIUIYIrErwheMUp4Si0KpyJNphloNrbw7Q", {
+      const res = await fetch("/api/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: prompt }] }],
-          generationConfig: { maxOutputTokens: 600, temperature: 0.8 }
-        })
+        body: JSON.stringify({ prompt })
       });
       if (!res.ok) throw new Error(`Error ${res.status}`);
       const data = await res.json();
-      const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
-      if (!text) throw new Error("Sin respuesta de Gemini");
+      const text = data.text;
+      if (!text) throw new Error("Sin respuesta");
       setSimWebAnalysis({ loading: false, text, error: null });
     } catch(e) {
       setSimWebAnalysis({ loading: false, text: null, error: e.message });
