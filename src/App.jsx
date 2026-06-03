@@ -247,23 +247,23 @@ export default function App() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const r = await window.storage.get("mw2026-results");
+        const r = await storage.get("mw2026-results");
         if (r) setResults(JSON.parse(r.value));
       } catch(_) {}
       try {
-        const a = await window.storage.get("mw2026-adjustments");
+        const a = await storage.get("mw2026-adjustments");
         if (a) setAdjustments(JSON.parse(a.value));
       } catch(_) {}
       try {
-        const gs = await window.storage.get("mw2026-groupstandings");
+        const gs = await storage.get("mw2026-groupstandings");
         if (gs) setGroupStandings(JSON.parse(gs.value));
       } catch(_) {}
       try {
-        const cq = await window.storage.get("mw2026-qualifiers");
+        const cq = await storage.get("mw2026-qualifiers");
         if (cq) setConfirmedQualifiers(JSON.parse(cq.value));
       } catch(_) {}
       try {
-        const km = await window.storage.get("mw2026-knockout");
+        const km = await storage.get("mw2026-knockout");
         if (km) setKnockoutMatches(JSON.parse(km.value));
       } catch(_) {}
       setLoaded(true);
@@ -273,22 +273,22 @@ export default function App() {
 
   // ── STORAGE: save results ──
   const saveResults = useCallback(async (newR) => {
-    try { await window.storage.set("mw2026-results", JSON.stringify(newR)); } catch(_) {}
+    try { await storage.set("mw2026-results", JSON.stringify(newR)); } catch(_) {}
   }, []);
 
   // ── STORAGE: save adjustments ──
   const saveAdjustments = useCallback(async (newA) => {
-    try { await window.storage.set("mw2026-adjustments", JSON.stringify(newA)); } catch(_) {}
+    try { await storage.set("mw2026-adjustments", JSON.stringify(newA)); } catch(_) {}
   }, []);
 
   const saveGroupStandings = async (v) => {
-    try { await window.storage.set("mw2026-groupstandings", JSON.stringify(v)); } catch(_) {}
+    try { await storage.set("mw2026-groupstandings", JSON.stringify(v)); } catch(_) {}
   };
   const saveQualifiers = async (v) => {
-    try { await window.storage.set("mw2026-qualifiers", JSON.stringify(v)); } catch(_) {}
+    try { await storage.set("mw2026-qualifiers", JSON.stringify(v)); } catch(_) {}
   };
   const saveKnockout = async (v) => {
-    try { await window.storage.set("mw2026-knockout", JSON.stringify(v)); } catch(_) {}
+    try { await storage.set("mw2026-knockout", JSON.stringify(v)); } catch(_) {}
   };
 
   // ── Submit real result ──
@@ -353,7 +353,7 @@ export default function App() {
 
     const text = bullets.join("\n\n");
     setAiInsight(prev => ({ ...prev, [fid]: { loading: false, text } }));
-    try { await window.storage.set(`mw2026-insight-${fid}`, text); } catch(_) {}
+    try { await storage.set(`mw2026-insight-${fid}`, text); } catch(_) {}
   };
 
   const handleSubmitResult = async (fid) => {
@@ -405,7 +405,7 @@ export default function App() {
     if (!loaded) return;
     FRIENDLIES_BASE.forEach(async f => {
       try {
-        const r = await window.storage.get(`mw2026-insight-${f.id}`);
+        const r = await storage.get(`mw2026-insight-${f.id}`);
         if (r) setAiInsight(prev => ({ ...prev, [f.id]: { loading:false, text: r.value } }));
       } catch(_) {}
     });
@@ -1669,7 +1669,7 @@ Máximo 200 palabras total. Sé conciso y directo.`;
 
               const text = bullets.join("\n\n");
               setBracketInsight(prev=>({...prev,[slot.id]:{loading:false,text}}));
-              try { await window.storage.set(`mw2026-koinsight-${slot.id}`, text); } catch(_) {}
+              try { await storage.set(`mw2026-koinsight-${slot.id}`, text); } catch(_) {}
             };
 
             return (
