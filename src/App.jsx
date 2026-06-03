@@ -1,5 +1,23 @@
 import { useState, useEffect, useCallback } from "react";
 
+// ─── STORAGE ADAPTER (localStorage) ──────────────────────────────────────────
+const storage = {
+  get: async (key) => {
+    const v = localStorage.getItem(key);
+    if (v === null) throw new Error("not found");
+    return { value: v };
+  },
+  set: async (key, value) => {
+    localStorage.setItem(key, value);
+    return { value };
+  },
+  delete: async (key) => {
+    localStorage.removeItem(key);
+    return { deleted: true };
+  },
+};
+
+
 // ─── 48 EQUIPOS ──────────────────────────────────────────────────────────────
 const TEAMS_DATA = {
   México:         { fifa:15, valor:390, forma:63, odds:60,  contexto:88, cohesion:72, torneos:75, xGF:1.4, xGA:1.1, cornersF:5.2, cornersA:4.8, bandera:"🇲🇽", grupo:"A" },
