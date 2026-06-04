@@ -162,6 +162,87 @@ const FRIENDLIES_BASE = [
   { id:"f10c",home:"Austria",       away:"Guatemala",       date:"10 jun", label:"Austria vs Guatemala" },
 ];
 
+// ─── PARTIDOS MUNDIAL 2026 — FASE DE GRUPOS (72 partidos) ────────────────────
+const WC_GROUP_MATCHES = [
+  // ── JORNADA 1 ──
+  { id:"wc-A1", home:"México", away:"Sudáfrica", date:"11 jun", label:"México vs Sudáfrica", fase:"Grupo A · J1" },
+  { id:"wc-A2", home:"Corea_del_Sur", away:"Rep_Checa", date:"11 jun", label:"Corea del Sur vs Rep. Checa", fase:"Grupo A · J1" },
+  { id:"wc-B1", home:"Canadá", away:"Bosnia", date:"12 jun", label:"Canadá vs Bosnia", fase:"Grupo B · J1" },
+  { id:"wc-D1", home:"EE_UU", away:"Paraguay", date:"12 jun", label:"EE.UU. vs Paraguay", fase:"Grupo D · J1" },
+  { id:"wc-B2", home:"Qatar", away:"Suiza", date:"13 jun", label:"Qatar vs Suiza", fase:"Grupo B · J1" },
+  { id:"wc-C1", home:"Brasil", away:"Marruecos", date:"13 jun", label:"Brasil vs Marruecos", fase:"Grupo C · J1" },
+  { id:"wc-C2", home:"Haití", away:"Escocia", date:"13 jun", label:"Haití vs Escocia", fase:"Grupo C · J1" },
+  { id:"wc-D2", home:"Australia", away:"Turquía", date:"13 jun", label:"Australia vs Turquía", fase:"Grupo D · J1" },
+  { id:"wc-E1", home:"Alemania", away:"Curazao", date:"14 jun", label:"Alemania vs Curazao", fase:"Grupo E · J1" },
+  { id:"wc-E2", home:"Costa_Marfil", away:"Ecuador", date:"14 jun", label:"C. Marfil vs Ecuador", fase:"Grupo E · J1" },
+  { id:"wc-F1", home:"Países_Bajos", away:"Japón", date:"14 jun", label:"Países Bajos vs Japón", fase:"Grupo F · J1" },
+  { id:"wc-F2", home:"Suecia", away:"Túnez", date:"14 jun", label:"Suecia vs Túnez", fase:"Grupo F · J1" },
+  { id:"wc-G1", home:"Bélgica", away:"Egipto", date:"15 jun", label:"Bélgica vs Egipto", fase:"Grupo G · J1" },
+  { id:"wc-G2", home:"Irán", away:"Nueva_Zelanda", date:"15 jun", label:"Irán vs Nueva Zelanda", fase:"Grupo G · J1" },
+  { id:"wc-H1", home:"España", away:"Cabo_Verde", date:"15 jun", label:"España vs Cabo Verde", fase:"Grupo H · J1" },
+  { id:"wc-H2", home:"Arabia_Saudita", away:"Uruguay", date:"15 jun", label:"Arabia Saudita vs Uruguay", fase:"Grupo H · J1" },
+  { id:"wc-I1", home:"Francia", away:"Senegal", date:"16 jun", label:"Francia vs Senegal", fase:"Grupo I · J1" },
+  { id:"wc-I2", home:"Irak", away:"Noruega", date:"16 jun", label:"Irak vs Noruega", fase:"Grupo I · J1" },
+  { id:"wc-J1", home:"Argentina", away:"Argelia", date:"16 jun", label:"Argentina vs Argelia", fase:"Grupo J · J1" },
+  { id:"wc-J2", home:"Austria", away:"Jordania", date:"16 jun", label:"Austria vs Jordania", fase:"Grupo J · J1" },
+  { id:"wc-K1", home:"Portugal", away:"RD_Congo", date:"17 jun", label:"Portugal vs RD Congo", fase:"Grupo K · J1" },
+  { id:"wc-K2", home:"Uzbekistán", away:"Colombia", date:"17 jun", label:"Uzbekistán vs Colombia", fase:"Grupo K · J1" },
+  { id:"wc-L1", home:"Inglaterra", away:"Croacia", date:"17 jun", label:"Inglaterra vs Croacia", fase:"Grupo L · J1" },
+  { id:"wc-L2", home:"Ghana", away:"Panamá", date:"17 jun", label:"Ghana vs Panamá", fase:"Grupo L · J1" },
+  // ── JORNADA 2 ──
+  { id:"wc-A3", home:"México", away:"Corea_del_Sur", date:"18 jun", label:"México vs Corea del Sur", fase:"Grupo A · J2" },
+  { id:"wc-A4", home:"Sudáfrica", away:"Rep_Checa", date:"18 jun", label:"Sudáfrica vs Rep. Checa", fase:"Grupo A · J2" },
+  { id:"wc-B3", home:"Canadá", away:"Qatar", date:"18 jun", label:"Canadá vs Qatar", fase:"Grupo B · J2" },
+  { id:"wc-B4", home:"Suiza", away:"Bosnia", date:"18 jun", label:"Suiza vs Bosnia", fase:"Grupo B · J2" },
+  { id:"wc-C3", home:"Brasil", away:"Haití", date:"19 jun", label:"Brasil vs Haití", fase:"Grupo C · J2" },
+  { id:"wc-C4", home:"Marruecos", away:"Escocia", date:"19 jun", label:"Marruecos vs Escocia", fase:"Grupo C · J2" },
+  { id:"wc-D3", home:"EE_UU", away:"Australia", date:"19 jun", label:"EE.UU. vs Australia", fase:"Grupo D · J2" },
+  { id:"wc-D4", home:"Paraguay", away:"Turquía", date:"19 jun", label:"Paraguay vs Turquía", fase:"Grupo D · J2" },
+  { id:"wc-E3", home:"Alemania", away:"Costa_Marfil", date:"20 jun", label:"Alemania vs C. Marfil", fase:"Grupo E · J2" },
+  { id:"wc-E4", home:"Curazao", away:"Ecuador", date:"20 jun", label:"Curazao vs Ecuador", fase:"Grupo E · J2" },
+  { id:"wc-F3", home:"Países_Bajos", away:"Suecia", date:"20 jun", label:"Países Bajos vs Suecia", fase:"Grupo F · J2" },
+  { id:"wc-F4", home:"Japón", away:"Túnez", date:"20 jun", label:"Japón vs Túnez", fase:"Grupo F · J2" },
+  { id:"wc-G3", home:"Bélgica", away:"Irán", date:"21 jun", label:"Bélgica vs Irán", fase:"Grupo G · J2" },
+  { id:"wc-G4", home:"Egipto", away:"Nueva_Zelanda", date:"21 jun", label:"Egipto vs Nueva Zelanda", fase:"Grupo G · J2" },
+  { id:"wc-H3", home:"España", away:"Arabia_Saudita", date:"21 jun", label:"España vs Arabia Saudita", fase:"Grupo H · J2" },
+  { id:"wc-H4", home:"Cabo_Verde", away:"Uruguay", date:"21 jun", label:"Cabo Verde vs Uruguay", fase:"Grupo H · J2" },
+  { id:"wc-I3", home:"Francia", away:"Irak", date:"22 jun", label:"Francia vs Irak", fase:"Grupo I · J2" },
+  { id:"wc-I4", home:"Senegal", away:"Noruega", date:"22 jun", label:"Senegal vs Noruega", fase:"Grupo I · J2" },
+  { id:"wc-J3", home:"Argentina", away:"Austria", date:"22 jun", label:"Argentina vs Austria", fase:"Grupo J · J2" },
+  { id:"wc-J4", home:"Argelia", away:"Jordania", date:"22 jun", label:"Argelia vs Jordania", fase:"Grupo J · J2" },
+  { id:"wc-K3", home:"Portugal", away:"Uzbekistán", date:"23 jun", label:"Portugal vs Uzbekistán", fase:"Grupo K · J2" },
+  { id:"wc-K4", home:"RD_Congo", away:"Colombia", date:"23 jun", label:"RD Congo vs Colombia", fase:"Grupo K · J2" },
+  { id:"wc-L3", home:"Inglaterra", away:"Ghana", date:"23 jun", label:"Inglaterra vs Ghana", fase:"Grupo L · J2" },
+  { id:"wc-L4", home:"Croacia", away:"Panamá", date:"23 jun", label:"Croacia vs Panamá", fase:"Grupo L · J2" },
+  // ── JORNADA 3 ──
+  { id:"wc-A5", home:"México", away:"Rep_Checa", date:"24 jun", label:"México vs Rep. Checa", fase:"Grupo A · J3" },
+  { id:"wc-A6", home:"Sudáfrica", away:"Corea_del_Sur", date:"24 jun", label:"Sudáfrica vs Corea del Sur", fase:"Grupo A · J3" },
+  { id:"wc-B5", home:"Suiza", away:"Canadá", date:"24 jun", label:"Suiza vs Canadá", fase:"Grupo B · J3" },
+  { id:"wc-B6", home:"Bosnia", away:"Qatar", date:"24 jun", label:"Bosnia vs Qatar", fase:"Grupo B · J3" },
+  { id:"wc-C5", home:"Brasil", away:"Escocia", date:"25 jun", label:"Brasil vs Escocia", fase:"Grupo C · J3" },
+  { id:"wc-C6", home:"Marruecos", away:"Haití", date:"25 jun", label:"Marruecos vs Haití", fase:"Grupo C · J3" },
+  { id:"wc-D5", home:"Turquía", away:"EE_UU", date:"25 jun", label:"Turquía vs EE.UU.", fase:"Grupo D · J3" },
+  { id:"wc-D6", home:"Australia", away:"Paraguay", date:"25 jun", label:"Australia vs Paraguay", fase:"Grupo D · J3" },
+  { id:"wc-E5", home:"Alemania", away:"Ecuador", date:"26 jun", label:"Alemania vs Ecuador", fase:"Grupo E · J3" },
+  { id:"wc-E6", home:"Curazao", away:"Costa_Marfil", date:"26 jun", label:"Curazao vs C. Marfil", fase:"Grupo E · J3" },
+  { id:"wc-F5", home:"Países_Bajos", away:"Túnez", date:"26 jun", label:"Países Bajos vs Túnez", fase:"Grupo F · J3" },
+  { id:"wc-F6", home:"Japón", away:"Suecia", date:"26 jun", label:"Japón vs Suecia", fase:"Grupo F · J3" },
+  { id:"wc-G5", home:"Bélgica", away:"Nueva_Zelanda", date:"26 jun", label:"Bélgica vs Nueva Zelanda", fase:"Grupo G · J3" },
+  { id:"wc-G6", home:"Egipto", away:"Irán", date:"26 jun", label:"Egipto vs Irán", fase:"Grupo G · J3" },
+  { id:"wc-H5", home:"España", away:"Uruguay", date:"27 jun", label:"España vs Uruguay", fase:"Grupo H · J3" },
+  { id:"wc-H6", home:"Cabo_Verde", away:"Arabia_Saudita", date:"27 jun", label:"Cabo Verde vs Arabia Saudita", fase:"Grupo H · J3" },
+  { id:"wc-I5", home:"Francia", away:"Noruega", date:"27 jun", label:"Francia vs Noruega", fase:"Grupo I · J3" },
+  { id:"wc-I6", home:"Senegal", away:"Irak", date:"27 jun", label:"Senegal vs Irak", fase:"Grupo I · J3" },
+  { id:"wc-J5", home:"Argentina", away:"Jordania", date:"27 jun", label:"Argentina vs Jordania", fase:"Grupo J · J3" },
+  { id:"wc-J6", home:"Argelia", away:"Austria", date:"27 jun", label:"Argelia vs Austria", fase:"Grupo J · J3" },
+  { id:"wc-K5", home:"Portugal", away:"Colombia", date:"26 jun", label:"Portugal vs Colombia", fase:"Grupo K · J3" },
+  { id:"wc-K6", home:"RD_Congo", away:"Uzbekistán", date:"26 jun", label:"RD Congo vs Uzbekistán", fase:"Grupo K · J3" },
+  { id:"wc-L5", home:"Inglaterra", away:"Panamá", date:"26 jun", label:"Inglaterra vs Panamá", fase:"Grupo L · J3" },
+  { id:"wc-L6", home:"Croacia", away:"Ghana", date:"26 jun", label:"Croacia vs Ghana", fase:"Grupo L · J3" },
+];
+
+
+
 // ─── MODEL ENGINE ────────────────────────────────────────────────────────────
 function calcScore(team, adjustments = {}) {
   const t = TEAMS_DATA[team] || SIM_ONLY_TEAMS[team];
@@ -191,8 +272,13 @@ function predictMatch(homeKey, awayKey, adjustments = {}) {
   const prob_home = Math.min(0.82, Math.max(0.08, 0.5 + homeAdj / 110));
   const prob_away = Math.min(0.82, Math.max(0.08, 0.5 - homeAdj / 110));
   const prob_draw = Math.max(0.10, 1 - prob_home - prob_away);
-  const xGHome = ht ? Math.round(((0.7 + (sh/100)*1.5)*0.6 + ht.xGF*0.4)*10)/10 : 1.2;
-  const xGAway = at ? Math.round(((0.5 + (sa/100)*1.3)*0.6 + at.xGF*0.4)*10)/10 : 1.0;
+  const adjH = adjustments[homeKey] || {};
+  const adjA = adjustments[awayKey] || {};
+  const xgBonusH = adjH.xgBonus || 0, xgBonusA = adjA.xgBonus || 0;
+  const defPenH = adjH.defPenalty || 0, defPenA = adjA.defPenalty || 0;
+  // xG ofensivo + bonus aprendido, y el rival suma su penalización defensiva
+  const xGHome = ht ? Math.round((((0.7 + (sh/100)*1.5)*0.6 + ht.xGF*0.4) + xgBonusH + defPenA)*10)/10 : 1.2;
+  const xGAway = at ? Math.round((((0.5 + (sa/100)*1.3)*0.6 + at.xGF*0.4) + xgBonusA + defPenH)*10)/10 : 1.0;
   const totalXG = Math.round((xGHome + xGAway)*10)/10;
   const cornH = ht ? Math.round(((3.5+(sh/100)*3)*0.6+ht.cornersF*0.4)*10)/10 : 5.0;
   const cornA = at ? Math.round(((3.0+(sa/100)*2.8)*0.6+at.cornersF*0.4)*10)/10 : 4.5;
@@ -227,6 +313,7 @@ export default function App() {
   const [simSubmitted, setSimSubmitted] = useState(false);
   const [simResultData, setSimResultData] = useState(null);
   const [simWebAnalysis, setSimWebAnalysis] = useState(null);
+  const [feedFilter, setFeedFilter] = useState("amistosos"); // "amistosos" | "mundial" 
   const [loaded, setLoaded] = useState(false);
   // ── Backup state ──
   const [showBackup, setShowBackup] = useState(false);
@@ -384,16 +471,56 @@ export default function App() {
     setEditingId(null);
     setEditForm({});
 
-    // Auto-learn: si el xG estuvo muy lejos, ajustar forma del equipo ganador
+    // ── MOTOR DE APRENDIZAJE MEJORADO ──
+    // Aprende de cada partido ajustando múltiples variables
+    const newAdj = { ...adjustments };
+    const ensureTeam = (k) => { if (!newAdj[k]) newAdj[k] = {}; };
+    // Mayor peso de aprendizaje en partidos del Mundial que en amistosos
+    const isWC = (f.id || "").startsWith("wc-");
+    const weight = isWC ? 1.5 : 1.0; // partidos del Mundial pesan más
+
+    // 1. Ajuste por resultado inesperado (el modelo predijo mal el ganador)
+    if (!entry.deltas.resultOk) {
+      const realWinner = hG>aG ? f.home : aG>hG ? f.away : null;
+      const realLoser  = hG>aG ? f.away : aG>hG ? f.home : null;
+      if (realWinner) {
+        ensureTeam(realWinner);
+        newAdj[realWinner].formaBonus = Math.min(10, (newAdj[realWinner].formaBonus||0) + 2*weight);
+      }
+      if (realLoser) {
+        ensureTeam(realLoser);
+        newAdj[realLoser].formaBonus = Math.max(-6, (newAdj[realLoser].formaBonus||0) - 1*weight);
+      }
+    }
+
+    // 2. Ajuste de xG ofensivo según error de goles
     if (Math.abs(deltaGoles) > 1.5) {
       const winnerKey = hG>aG ? f.home : aG>hG ? f.away : null;
       if (winnerKey) {
-        const newAdj = { ...adjustments };
-        if (!newAdj[winnerKey]) newAdj[winnerKey] = {};
-        newAdj[winnerKey].formaBonus = Math.min(8, (newAdj[winnerKey].formaBonus||0) + 2);
-        setAdjustments(newAdj);
-        await saveAdjustments(newAdj);
+        ensureTeam(winnerKey);
+        newAdj[winnerKey].formaBonus = Math.min(10, (newAdj[winnerKey].formaBonus||0) + 1*weight);
+        // Si anotó muchos goles, sube su xG esperado
+        const scorer = hG>aG ? hG : aG;
+        if (scorer >= 3) {
+          newAdj[winnerKey].xgBonus = Math.min(0.8, (newAdj[winnerKey].xgBonus||0) + 0.15*weight);
+        }
       }
+    }
+
+    // 3. Ajuste defensivo: si un equipo recibió muchos goles
+    const concededHome = aG, concededAway = hG;
+    if (concededHome >= 3) {
+      ensureTeam(f.home);
+      newAdj[f.home].defPenalty = Math.min(0.6, (newAdj[f.home].defPenalty||0) + 0.1*weight);
+    }
+    if (concededAway >= 3) {
+      ensureTeam(f.away);
+      newAdj[f.away].defPenalty = Math.min(0.6, (newAdj[f.away].defPenalty||0) + 0.1*weight);
+    }
+
+    if (Object.keys(newAdj).length > 0) {
+      setAdjustments(newAdj);
+      await saveAdjustments(newAdj);
     }
     // Fetch AI insight
     fetchInsight(fid, f, entry, pred);
@@ -403,7 +530,7 @@ export default function App() {
   // Load saved insights on mount
   useEffect(() => {
     if (!loaded) return;
-    FRIENDLIES_BASE.forEach(async f => {
+    [...FRIENDLIES_BASE, ...WC_GROUP_MATCHES].forEach(async f => {
       try {
         const r = await storage.get(`mw2026-insight-${f.id}`);
         if (r) setAiInsight(prev => ({ ...prev, [f.id]: { loading:false, text: r.value } }));
@@ -415,7 +542,7 @@ export default function App() {
   const played = Object.entries(results)
     .filter(([, v]) => v && v.deltas !== undefined)
     .map(([k, v]) => {
-      const base = FRIENDLIES_BASE.find(f => f.id === k);
+      const base = FRIENDLIES_BASE.find(f => f.id === k) || WC_GROUP_MATCHES.find(f => f.id === k);
       const homeLabel = base?.home || (v.pred?.home) || "?";
       const awayLabel = base?.away || (v.pred?.away) || "?";
       return { id:k, home:homeLabel, away:awayLabel,
@@ -531,7 +658,7 @@ Máximo 200 palabras total. Sé conciso y directo.`;
             <div style={{ fontSize:9, letterSpacing:5, color:"#ff9966", textTransform:"uppercase" }}>Copa del Mundo</div>
             <div style={{ fontSize:18, fontWeight:900, letterSpacing:2, color:"#fff" }}>
               ⚽ MUNDIAL 2026 <span style={{ color:"#ff6b35" }}>PREDICTOR</span>
-              <span style={{ fontSize:10, color:"#554433", fontWeight:400, marginLeft:8 }}>v6.0 · IA Gemini</span>
+              <span style={{ fontSize:10, color:"#554433", fontWeight:400, marginLeft:8 }}>v7.0 · Mundial + IA</span>
             </div>
           </div>
           <div style={{ display:"flex", alignItems:"center", gap:8 }}>
@@ -575,7 +702,24 @@ Máximo 200 palabras total. Sé conciso y directo.`;
               Todo queda <strong style={{ color:"#00cc88" }}>guardado en memoria persistente</strong> — incluso si cerrás el navegador.
             </div>
 
-            {FRIENDLIES_BASE.map(f => {
+            {/* ── FILTRO: Amistosos / Mundial ── */}
+            <div style={{ display:"flex", gap:8, marginBottom:16 }}>
+              {[
+                { id:"amistosos", label:"⚽ Amistosos", count: FRIENDLIES_BASE.length },
+                { id:"mundial", label:"🏆 Mundial", count: WC_GROUP_MATCHES.length },
+              ].map(t=>(
+                <button key={t.id} onClick={()=>setFeedFilter(t.id)} style={{
+                  flex:1, padding:"12px", border:"none", borderRadius:10, cursor:"pointer",
+                  background: feedFilter===t.id ? "linear-gradient(90deg,#b02800,#ff6b35)" : "rgba(255,255,255,0.05)",
+                  color: feedFilter===t.id ? "#fff" : "#887766",
+                  fontWeight: feedFilter===t.id ? 800 : 400, fontSize:13,
+                }}>
+                  {t.label} <span style={{ fontSize:10, opacity:0.8 }}>({t.count})</span>
+                </button>
+              ))}
+            </div>
+
+            {(feedFilter==="mundial" ? WC_GROUP_MATCHES : FRIENDLIES_BASE).map(f => {
               const pred  = predictMatch(f.home, f.away, adjustments);
               const res   = results[f.id];
               const isExp = expanded === f.id;
