@@ -1051,16 +1051,29 @@ Máximo 200 palabras total. Sé conciso y directo.`;
                   <div style={{ background:"rgba(0,204,136,0.06)", border:"1px solid rgba(0,204,136,0.25)", borderRadius:11, padding:14 }}>
                     <div style={{ fontSize:12, fontWeight:700, color:"#00cc88", marginBottom:10 }}>
                       ⚡ AJUSTES APRENDIDOS POR EL MODELO
+                      <span style={{ fontSize:9, color:"#665544", fontWeight:400, marginLeft:8 }}>forma · ataque · defensa</span>
                     </div>
-                    {Object.entries(adjustments).map(([team, adj])=>(
-                      <div key={team} style={{ display:"flex", justifyContent:"space-between", padding:"5px 0",
-                        borderBottom:"1px solid rgba(255,255,255,0.05)", fontSize:11 }}>
-                        <span>{flag(team)} {teamLabel(team)}</span>
-                        <span style={{ color:"#00cc88" }}>
-                          {adj.formaBonus ? `Forma +${adj.formaBonus}` : ""}
-                        </span>
-                      </div>
-                    ))}
+                    {Object.entries(adjustments).map(([team, adj])=>{
+                      if (!adj.formaBonus && !adj.xgBonus && !adj.defPenalty) return null;
+                      const tags = [];
+                      if (adj.formaBonus) tags.push({ label:`Forma ${adj.formaBonus>0?"+":""}${adj.formaBonus}`, color: adj.formaBonus>0?"#00cc88":"#cc4422" });
+                      if (adj.xgBonus)    tags.push({ label:`⚽ Ataque +${adj.xgBonus.toFixed(2)}xG`, color:"#ff9966" });
+                      if (adj.defPenalty) tags.push({ label:`🛡️ Def -${adj.defPenalty.toFixed(2)}`, color:"#cc6644" });
+                      return (
+                        <div key={team} style={{ display:"flex", justifyContent:"space-between", alignItems:"center",
+                          padding:"7px 0", borderBottom:"1px solid rgba(255,255,255,0.05)", gap:8 }}>
+                          <span style={{ fontSize:11, fontWeight:600 }}>{flag(team)} {teamLabel(team)}</span>
+                          <div style={{ display:"flex", gap:6, flexWrap:"wrap", justifyContent:"flex-end" }}>
+                            {tags.map((t,i)=>(
+                              <span key={i} style={{ fontSize:10, color:t.color, background:`${t.color}18`,
+                                borderRadius:4, padding:"2px 7px", fontWeight:700, whiteSpace:"nowrap" }}>
+                                {t.label}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      );
+                    })}
                     <div style={{ fontSize:9, color:"#443322", marginTop:8 }}>
                       Estos ajustes se aplican automáticamente en todas las predicciones futuras.
                     </div>
