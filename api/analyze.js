@@ -11,7 +11,7 @@ export default async function handler(req, res) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer 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',
+        'Authorization': 'Bearer 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',
       },
       body: JSON.stringify({
         model: 'llama-3.3-70b-versatile',
