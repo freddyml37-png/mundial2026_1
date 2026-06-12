@@ -444,13 +444,13 @@ export default function App() {
   };
 
   const handleSubmitResult = async (fid) => {
-    const f = FRIENDLIES_BASE.find(x=>x.id===fid);
+    const f = FRIENDLIES_BASE.find(x=>x.id===fid) || WC_GROUP_MATCHES.find(x=>x.id===fid);
     const hG = parseFloat(editForm.hG);
     const aG = parseFloat(editForm.aG);
     const hC = parseFloat(editForm.hC||0);
     const aC = parseFloat(editForm.aC||0);
     const notes = editForm.notes||"";
-    if (isNaN(hG)||isNaN(aG)) return;
+    if (!f || isNaN(hG)||isNaN(aG)) return;
 
     const pred = predictMatch(f.home, f.away, adjustments);
     const realResult = hG>aG?"1":aG>hG?"2":"X";
@@ -658,7 +658,7 @@ Máximo 200 palabras total. Sé conciso y directo.`;
             <div style={{ fontSize:9, letterSpacing:5, color:"#ff9966", textTransform:"uppercase" }}>Copa del Mundo</div>
             <div style={{ fontSize:18, fontWeight:900, letterSpacing:2, color:"#fff" }}>
               ⚽ MUNDIAL 2026 <span style={{ color:"#ff6b35" }}>PREDICTOR</span>
-              <span style={{ fontSize:10, color:"#554433", fontWeight:400, marginLeft:8 }}>v7.0 · Mundial + IA</span>
+              <span style={{ fontSize:10, color:"#554433", fontWeight:400, marginLeft:8 }}>v7.1 · Fix Mundial</span>
             </div>
           </div>
           <div style={{ display:"flex", alignItems:"center", gap:8 }}>
@@ -1313,7 +1313,7 @@ Máximo 200 palabras total. Sé conciso y directo.`;
                       onClick={async () => {
                         const hG = parseFloat(simForm.hG);
                         const aG = parseFloat(simForm.aG);
-                        if (isNaN(hG)||isNaN(aG)) return;
+                        if (!f || isNaN(hG)||isNaN(aG)) return;
                         const hC = parseFloat(simForm.hC||0);
                         const aC = parseFloat(simForm.aC||0);
                         const notes = simForm.notes||"";
